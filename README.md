@@ -1,18 +1,15 @@
 # MEDI CENTER - Full Stack Project
 
-Aplicacion para control medico gestionando doctores, pecientes y sus historias clinicas, reserva de citas, etc, desarrollado con una arquitectura por capas **Spring Boot**, **Angular**, **MySQL** y **Docker**.
+Aplicacion portal de noticias permite la gestion de noticias y administracion de favoritos, desarrollado con una arquitectura hexagonal utilizando **Spring Boot**, **Angular**, **MySQL** y **Docker**.
 
 ## 📦 Estructura del Proyecto
 
 ```
 fullstack-MediCenter/
-├── medi-center-backend/         # Api para la gestion del sistema
-├── medi-center-database/
+├── newsportal-app-backend/      # Api para la gestion del sistema
+├── newsportal-app-database/
 │   └── sql/                     # Scripts y stored procedures
-├── medi-center-docs/            # docuemntacion del proyecto
-├── postman/
-│   └── collection/              # Archivo para pruebas de api
-├── medi-center-frontend/        # Interfaz de usuario (Angular)
+├── newsportal-app-frontend/     # Interfaz de usuario (Angular)
 ├── docker-compose.yml
 ```
 
@@ -28,8 +25,8 @@ fullstack-MediCenter/
 1. Clona el repositorio:
 
 ```bash
-git clone https://github.com/jborbor/fullstack-MediCenterApp.git
-cd fullstack-medicenter
+git clone https://github.com/jborbor/fullstack-NewsPortalApp.git
+cd fullstack-newsportalapp
 ```
 
 2. Levanta los contenedores:

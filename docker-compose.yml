@@ -2,41 +2,41 @@ services:
 
   mysql:
     image: mysql:8.0
-    container_name: medi-center-mysql-db
+    container_name: newsportal-app-mysql-db
     restart: unless-stopped
     environment:
       MYSQL_ROOT_PASSWORD: 1234
-      MYSQL_DATABASE: db_medi_center
+      MYSQL_DATABASE: db_news_portal
     ports:
       - "3306:3306"
     volumes:
       - mysql-data:/var/lib/mysql
-      - ./medi-center-database/sql:/docker-entrypoint-initdb.d
+      - ./newsportal-app-database/sql:/docker-entrypoint-initdb.d
     networks:
-      - mcenter-network
+      - newsportal-network
 
-  medi-center-backend:
-    build: ./medi-center-backend
-    container_name: medi-center-backend
+  newsportal-app-backend:
+    build: ./newsportal-app-backend
+    container_name: newsportal-app-backend
     mem_limit: 800m
     ports:
       - "8080:8080"
     networks:
-      - mcenter-network
+      - newsportal-network
     depends_on:
       - mysql
 
-  medi-center-frontend:
-    build: ./medi-center-frontend
-    container_name: medi-center-frontend
+  newsportal-app-frontend:
+    build: ./newsportal-app-frontend
+    container_name: newsportal-app-frontend
     mem_limit: 800m
     ports:
       - "4200:80"
     networks:
-      - mcenter-network
+      - newsportal-network
 
 volumes:
   mysql-data:
 
 networks:
-  mcenter-network:
+  newsportal-network:
