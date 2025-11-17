@@ -1,4 +1,4 @@
-# MEDI CENTER - Full Stack Project
+# NEWS PORTAL - Full Stack Project
 
 Aplicacion portal de noticias permite la gestion de noticias y administracion de favoritos, desarrollado con una arquitectura hexagonal utilizando **Spring Boot**, **Angular**, **MySQL** y **Docker**.
 
